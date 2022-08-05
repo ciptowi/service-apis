@@ -15,10 +15,10 @@ class App {
     this.app = express();
     this.port = port;
 
-    this.initializeMiddlewares;
-    this.initializeCors;
-    this.initializeHelmet;
-    this.initializeRouters;
+    this.initializeMiddlewares();
+    this.initializeCors();
+    this.initializeHelmet();
+    this.initializeRouters();
   }
 
   private initializeMiddlewares() {
@@ -33,7 +33,7 @@ class App {
     this.app.use(helmet());
   }
 
-  public initializeRouters() {
+  private initializeRouters() {
     this.app.use(router);
   }
 
